@@ -4,6 +4,8 @@ import './App.css'
 
 import { calculateTip, calculateTotal } from './calculator';
 import { AppContext, AppState, initialState } from './context';
+import Form from './components/Form';
+import Result from './components/Result';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
 
   return (
     <AppContext.Provider value={{ state, setState }}>
+      <Form />
+      <Result />
     </AppContext.Provider>
   )
 }
