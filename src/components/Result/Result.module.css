@@ -1,0 +1,48 @@
+.result {
+  background-color: rgb(2, 95, 75);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result_item h4 {
+  color: white;
+}
+
+.result_item p {
+  color: rgba(128, 128, 128, 0.7);
+}
+
+.result_item h2 {
+  color: rgba(40, 212, 146, 0.9);
+  font-size: 30px;
+}
+
+.rest_btn {
+  font-size: 30px;
+  background-color: rgba(40, 212, 146, 0.9);
+  color: rgb(2, 95, 75);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  padding: 5px 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .result_item h4 {
+    font-size: 17px;
+  }
+}

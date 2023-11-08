@@ -1,0 +1,23 @@
+.tip,
+.selected_tip {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(2, 95, 75);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  transition: 0.2s;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.tip:hover {
+  background-color: rgba(40, 212, 146, 0.7);
+  color: rgb(2, 95, 75);
+}
+
+.selected_tip {
+  background-color: rgba(40, 212, 146, 0.9);
+  color: rgb(2, 95, 75);
+}
