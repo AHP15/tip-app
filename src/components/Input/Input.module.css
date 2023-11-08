@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.input_head label {
+  color: rgba(128, 128, 128, 0.712);
+}
+
 .input_body,
 .input_body_invalid {
   background-color: rgba(2, 95, 75, 0.3);
@@ -36,7 +40,6 @@
   -moz-appearance: textfield; /* Firefox */
   appearance: textfield; /* Other browsers */
   font-size: 20px;
-  font-weight: 600;
 }
 
 .input_body img,
