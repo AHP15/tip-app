@@ -3,6 +3,8 @@ import { initialState, useAppState } from '../../context';
 import Input from '../Input';
 import TipButton from '../TipButton';
 
+import styles from './Tip.module.css';
+
 const tips = [5, 10, 15, 25, 50];
 const Tip = () => {
 
@@ -10,6 +12,7 @@ const Tip = () => {
     const [custom, setCustom] = useState(false);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setCustom(true);
         setState(prev => ({ ...prev, [event.target.name]: event.target.value }));
     };
 
@@ -19,33 +22,33 @@ const Tip = () => {
     }
 
     return (
-        <div>
+        <div className={styles.tip_container}>
             {
                 tips.map(tip => (
-                    <TipButton key={tip} tip={tip} setState={handleClick} />
+                    <TipButton
+                      key={tip}
+                      tip={tip}
+                      setState={handleClick}
+                      selected={Number(state.tip)}
+                    />
                 ))
             }
-            {
-                custom ? (
-                    <Input
-                        options={{
-                            type: 'number',
-                            name: 'tip',
-                            placeholder: '0',
-                            value: state.tip,
-                            onChange: handleChange
-                        }}
-                        icon_url=''
-                        label=''
-                        validation={{
-                            valid: state.tip === initialState.tip || Number(state.tip) > 0,
-                            message: "Can't be zero"
-                        }}
-                    />
-                ) : (
-                    <button data-testid="custom-tip" type="button" onClick={() => setCustom(true)}>Custom</button>
-                )
-            }
+            <Input
+                options={{
+                    type: 'number',
+                    name: 'tip',
+                    placeholder: 'Custom',
+                    dir: 'rtl',
+                    value: custom ? state.tip: '',
+                    onChange: handleChange
+                }}
+                icon_url=''
+                label=''
+                validation={{
+                    valid: state.tip === initialState.tip || Number(state.tip) > 0,
+                    message: "Can't be zero"
+                }}
+            />
         </div>
     );
 };

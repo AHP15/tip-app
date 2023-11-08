@@ -1,0 +1,15 @@
+.tip_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .tip_container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: 1fr 1fr; /* 2 rows */
+  }
+}

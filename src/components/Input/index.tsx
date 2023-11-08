@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './Input.module.css';
+
 type Options = {
     type: string,
     name: string,
@@ -7,6 +9,7 @@ type Options = {
     placeholder: string,
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
     required?: boolean,
+    dir: string
 };
 
 type Validation = {
@@ -23,13 +26,20 @@ const Input = (
     }
 ) => {
     return (
-        <div>
-            {!validation.valid ?  <p data-testid={`error-${options.name}`}>
-                {validation.message}
-            </p>: null}
-            <label>{label}</label>
-            <img src={icon_url} alt={options.name} />
-            <input data-testid={`${options.name}`} {...options} />
+        <div className={styles.input_container}>
+
+            <div className={styles.input_head}>
+                <label>{label}</label>
+                {!validation.valid 
+                ? <p data-testid={`error-${options.name}`} style={{ 'color': 'red' }}>
+                    {validation.message}
+                </p> : null}
+            </div>
+
+            <div className={styles[`${validation.valid ? 'input_body':'input_body_invalid'}`]}>
+              {icon_url !== '' && <img src={icon_url} alt={options.name} />}
+              <input data-testid={`${options.name}`} {...options} />
+            </div>
         </div>
     );
 }

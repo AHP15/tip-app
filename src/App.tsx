@@ -24,8 +24,13 @@ function App() {
 
   return (
     <AppContext.Provider value={{ state, setState }}>
-      <Form />
-      <Result />
+      <div className='app'>
+        <h1>SPLITTER</h1>
+       <div className='content'>
+         <Form />
+         <Result />
+       </div>
+      </div>
     </AppContext.Provider>
   )
 }
