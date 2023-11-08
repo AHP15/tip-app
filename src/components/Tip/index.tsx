@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react';
-import { useAppState } from '../../context';
+import { initialState, useAppState } from '../../context';
 import Input from '../Input';
 import TipButton from '../TipButton';
 
@@ -31,11 +31,16 @@ const Tip = () => {
                         options={{
                             type: 'number',
                             name: 'tip',
+                            placeholder: '0',
                             value: state.tip,
                             onChange: handleChange
                         }}
                         icon_url=''
                         label=''
+                        validation={{
+                            valid: state.tip === initialState.tip || Number(state.tip) > 0,
+                            message: "Can't be zero"
+                        }}
                     />
                 ) : (
                     <button type="button" onClick={() => setCustom(true)}>Custom</button>

@@ -1,19 +1,19 @@
 import { createContext, useContext } from 'react';
 
 export type AppState = {
-    bill: number,
-    tip: number,
-    people: number,
-    amount: number,
-    total: number,
+    bill: number | string,
+    tip: number | string,
+    people: number | string,
+    amount: number | string,
+    total: number | string,
 };
 
 export const initialState: AppState = {
-    bill: 0,
-    tip: 0,
-    people: 0,
-    amount: 0,
-    total: 0,
+    bill: '',
+    tip: '',
+    people: '',
+    amount: (0).toFixed(2),
+    total: (0).toFixed(2),
 };
 
 type ContextType = {

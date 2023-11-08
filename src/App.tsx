@@ -13,7 +13,7 @@ function App() {
   const [state, setState] = useState<AppState>({...initialState});
 
   useEffect(() => {
-    if(!(state.people > 0)) return;
+    if(!(Number(state.people) > 0)) return;
 
     setState(prev => ({
       ...prev,
