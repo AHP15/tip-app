@@ -31,7 +31,7 @@ const Input = (
             <div className={styles.input_head}>
                 <label>{label}</label>
                 {!validation.valid 
-                ? <p data-testid={`error-${options.name}`} style={{ 'color': 'red' }}>
+                ? <p data-testid={`error-${options.name}`} className={styles.error}>
                     {validation.message}
                 </p> : null}
             </div>

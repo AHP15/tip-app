@@ -7,19 +7,19 @@ const Result = () => {
 
     return (
         <div className={styles.result}>
-            <div data-testid="amount" className={styles.result_item}>
+            <div className={styles.result_item}>
                 <div>
                     <h4>Tip Amount</h4>
                     <p>/ person</p>
                 </div>
-                <h2>${state.amount}</h2>
+                <h2 data-testid="amount">${state.amount}</h2>
             </div>
-            <div data-testid="total" className={styles.result_item}>
+            <div className={styles.result_item}>
                 <div>
                     <h4>Tip Amount</h4>
                     <p>/ person</p>
                 </div>
-                <h2>${state.total}</h2>
+                <h2 data-testid="total">${state.total}</h2>
             </div>
             <button
               data-testid="reset"
