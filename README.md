@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/Screenshot from 2023-11-08 12-41-32.png)
+![](./public/first.png)
 -------------------------
-![](./public/Screenshot from 2023-11-08 12-42-04.png)
+![](./public/second.png)
 
 
 ### Links
