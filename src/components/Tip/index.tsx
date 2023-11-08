@@ -43,7 +43,7 @@ const Tip = () => {
                         }}
                     />
                 ) : (
-                    <button type="button" onClick={() => setCustom(true)}>Custom</button>
+                    <button data-testid="custom-tip" type="button" onClick={() => setCustom(true)}>Custom</button>
                 )
             }
         </div>

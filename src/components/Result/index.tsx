@@ -5,9 +5,10 @@ const Result = () => {
 
     return (
         <div>
-            <div>{state.amount}</div>
-            <div>{state.total}</div>
-            <button type="button" onClick={() => setState(initialState)}>RESET</button>
+            <div data-testid="amount">{state.amount}</div>
+            <div data-testid="total">{state.total}</div>
+            <button
+              data-testid="reset" type="button" onClick={() => setState(initialState)}>RESET</button>
         </div>
     );
 };

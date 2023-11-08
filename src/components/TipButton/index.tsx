@@ -5,7 +5,7 @@ const TipButton = (
 ) => {
 
     return (
-        <button type="button" onClick={() => setState(tip)}>
+        <button data-testid={`tip-${tip}`} type="button" onClick={() => setState(tip)}>
             {tip}
         </button>
     );

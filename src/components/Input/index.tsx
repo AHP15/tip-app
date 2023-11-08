@@ -24,10 +24,12 @@ const Input = (
 ) => {
     return (
         <div>
-            {!validation.valid ?  <p>{validation.message}</p>: null}
+            {!validation.valid ?  <p data-testid={`error-${options.name}`}>
+                {validation.message}
+            </p>: null}
             <label>{label}</label>
             <img src={icon_url} alt={options.name} />
-            <input {...options} />
+            <input data-testid={`${options.name}`} {...options} />
         </div>
     );
 }
