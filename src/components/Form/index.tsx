@@ -1,4 +1,4 @@
-import { ChangeEvent} from 'react';
+import { ChangeEvent } from 'react';
 import { useAppState, initialState } from '../../context';
 import Input from '../Input';
 import Tip from '../Tip';
@@ -7,7 +7,6 @@ import dollar from '../../assets/dollar.png';
 import person from '../../assets/person.png';
 
 const Form = () => {
-
     const { state, setState } = useAppState();
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +14,7 @@ const Form = () => {
     };
 
     return (
-        <form style={{ 'margin': '10px' }}>
+        <form className="m-2 p-4 bg-white rounded-lg shadow-md">
             <Input
                 options={{
                     type: 'number',
@@ -32,7 +31,7 @@ const Form = () => {
                     message: "Can't be zero"
                 }}
             />
-            <p>Select Tip%</p>
+            <p className="mt-4 mb-2 text-gray-600 font-semibold">Select Tip%</p>
             <Tip />
             <Input
                 options={{

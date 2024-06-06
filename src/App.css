@@ -6,39 +6,3 @@
   font-weight: 700;
   font-family: 'Space Mono', monospace;
 }
-
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(40, 212, 146, 0.7);
-}
-
-.app h1 {
-  width: 110px;
-  word-wrap: break-word;
-  text-align: center;
-  letter-spacing: 5px;
-  color: rgb(2, 95, 75);
-}
-
-.content {
-  background-color: white;
-  width: 100%;
-  border-radius: 20px;
-}
-
-@media (min-width: 768px) {
-  .app {
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .content {
-    display: flex;
-    background-color: white;
-    padding: 20px;
-    width: 800px;
-  }
-}

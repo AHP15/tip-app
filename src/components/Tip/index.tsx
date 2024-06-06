@@ -3,8 +3,6 @@ import { initialState, useAppState } from '../../context';
 import Input from '../Input';
 import TipButton from '../TipButton';
 
-import styles from './Tip.module.css';
-
 const tips = [5, 10, 15, 25, 50];
 const Tip = () => {
 
@@ -22,14 +20,14 @@ const Tip = () => {
     }
 
     return (
-        <div className={styles.tip_container}>
+        <div className="grid grid-cols-3 gap-2 mb-4">
             {
                 tips.map(tip => (
                     <TipButton
-                      key={tip}
-                      tip={tip}
-                      setState={handleClick}
-                      selected={Number(state.tip)}
+                        key={tip}
+                        tip={tip}
+                        setState={handleClick}
+                        selected={Number(state.tip)}
                     />
                 ))
             }
@@ -39,7 +37,7 @@ const Tip = () => {
                     name: 'tip',
                     placeholder: 'Custom',
                     dir: 'rtl',
-                    value: custom ? state.tip: '',
+                    value: custom ? state.tip : '',
                     onChange: handleChange
                 }}
                 icon_url=''
@@ -54,3 +52,4 @@ const Tip = () => {
 };
 
 export default Tip;
+
